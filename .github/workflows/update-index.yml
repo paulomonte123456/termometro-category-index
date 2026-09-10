@@ -1,6 +1,12 @@
 name: Atualizar índice de categorias
 
 on:
+  push:
+    branches: ["main"]
+    paths:
+      - ".github/workflows/update-index.yml"
+      - "scripts/**"
+      - "package.json"
   schedule:
     - cron: "7,22,37,52 * * * *"
     - cron: "13 4 * * 0"
@@ -40,6 +46,7 @@ jobs:
         shell: bash
         run: |
           mode="incremental"
+          if [[ "${{ github.event_name }}" == "push" ]]; then mode="full"; fi
           if [[ "${{ github.event.schedule }}" == "13 4 * * 0" ]]; then mode="full"; fi
           if [[ "${{ github.event_name }}" == "workflow_dispatch" && "${{ inputs.full }}" == "true" ]]; then mode="full"; fi
           echo "mode=$mode" >> "$GITHUB_OUTPUT"
