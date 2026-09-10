@@ -1,0 +1,196 @@
+<script>
+(function($){
+  if (!$('body').hasClass('wsite-blog-index')) return;
+
+  const CETI_CAT_STYLE = {
+    "cobertura-oscar":      { bg:"#000000", text:"#ffc00d", border:"#ffffff", icon:"https://i.imgur.com/jHtZrjF.png", size:16 },
+    "oscar":                { bg:"#000000", text:"#ffc00d", border:"#ffffff", icon:"https://i.imgur.com/jHtZrjF.png", size:16 },
+    "alerta-oscar":         { bg:"#E31F25", text:"#FFFFFF", border:"#ffffff", icon:"https://i.imgur.com/VJ62uoC.png", size:16 },
+    "premiacao-preoscar":   { bg:"#BE8E23", text:"#FFFFFF", border:"#ffffff", icon:"https://i.imgur.com/FnNvkZt.png", size:16 },
+    "especial":             { bg:"#E0A800", text:"#ffffff", border:"#ffffff", icon:"https://i.imgur.com/DwXZEdQ.png", size:16 },
+    "festival-de-cannes":   { bg:"#2B2B2A", text:"#FFFFFF", border:"#ffffff", icon:"https://i.imgur.com/iuI6309.png", size:16 },
+    "festival-de-veneza":   { bg:"#2B2B2A", text:"#FFFFFF", border:"#ffffff", icon:"https://i.imgur.com/nhAQyFm.png", size:16 },
+    "festival-de-sundance": { bg:"#2B2B2A", text:"#FFFFFF", border:"#ffffff", icon:"https://i.imgur.com/PmgcCYQ.png", size:16 },
+    "festival-de-toronto":  { bg:"#2B2B2A", text:"#FFFFFF", border:"#ffffff", icon:"https://i.imgur.com/0Y2ALd0.png", size:16 },
+    "festival-de-nova-york":{ bg:"#2B2B2A", text:"#FFFFFF", border:"#ffffff", icon:"https://i.imgur.com/rEVSlTZ.png", size:16 },
+    "festival-de-telluride":{ bg:"#2B2B2A", text:"#FFFFFF", border:"#ffffff", icon:"https://i.imgur.com/iKNOsWK.png", size:16 },
+    "festival-de-berlim":   { bg:"#2B2B2A", text:"#FFFFFF", border:"#ffffff", icon:"https://i.imgur.com/s8u4nz3.png", size:16 },
+    "festival-de-londres":  { bg:"#2B2B2A", text:"#FFFFFF", border:"#ffffff", icon:"https://i.imgur.com/LCNAvNZ.png", size:16 },
+    "termometro-de-sexta":  { bg:"#F07F1B", text:"#FFFFFF", border:"#ffffff", icon:"https://i.imgur.com/RpFW5Uc.png", size:16 },
+    "noticias-do-dia":      { bg:"#FFC100", text:"#000000", border:"#ffffff", icon:"https://i.imgur.com/H6vzBd6.png", size:16 },
+    "trailer":              { bg:"#D2CEE8", text:"#000000", border:"#ffffff", icon:"https://i.imgur.com/tBkfNVb.png", size:16 },
+    "poster":               { bg:"#F08684", text:"#000000", border:"#ffffff", icon:"https://i.imgur.com/tJrokmm.png", size:16 },
+    "novidade":             { bg:"#B0CB21", text:"#000000", border:"#ffffff", icon:"https://i.imgur.com/NnoFHki.png", size:16 },
+    "podcast":              { bg:"#A8604B", text:"#FFFFFF", border:"#ffffff", icon:"https://i.imgur.com/mxKI3pP.png", size:16 },
+    "primeira-foto":        { bg:"#A2DAF8", text:"#000000", border:"#ffffff", icon:"https://i.imgur.com/lsZGAZ6.png", size:16 },
+    "in-memoriam":          { bg:"#B3B3B4", text:"#000000", border:"#ffffff", icon:"https://i.imgur.com/szuTp5Q.png", size:16 },
+    "in-memorian":          { bg:"#B3B3B4", text:"#000000", border:"#ffffff", icon:"https://i.imgur.com/szuTp5Q.png", size:16 },
+    "bastidores":           { bg:"#4E897C", text:"#FFFFFF", border:"#ffffff", icon:"https://i.imgur.com/s3WVBtt.png", size:16 },
+    "urgente":              { bg:"#E51C4C", text:"#FFFFFF", border:"#ffffff", icon:"https://i.imgur.com/jhphJf0.png", size:16 },
+    "exclusivo":            { bg:"#FA9666", text:"#000000", border:"#ffffff", icon:"https://i.imgur.com/gEaEDMI.png", size:16 }
+  };
+
+  const PRETTY_LABELS = {
+    "poster": "Pôster",
+    "termometro-de-sexta": "Termômetro de Sexta",
+    "premiacao-preoscar": "Premiação Pré-Oscar",
+    "noticias-do-dia": "Notícias do Dia"
+  };
+
+  const CAT_BASE = '/cinema-eacute-tudo-isso---blog/category/';
+  const FEED_URL = '/cinema-eacute-tudo-isso---blog/feed';
+  const INDEX_URL = 'https://paulomonte123456.github.io/termometro-category-index/categorias.js';
+  const INDEX_BUCKET_MS = 15*60*1000;
+  const FEED_TIMEOUT_MS = 8000;
+
+  function canonicalSlug(value){
+    const slug = (value || '').toString().trim().toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+      .replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'').replace(/-+/g,'-');
+    if (slug === 'premiacao-pre-oscar') return 'premiacao-preoscar';
+    if (slug === 'in-memorian') return 'in-memoriam';
+    return slug;
+  }
+
+  function slugFromHref(href){
+    try{
+      const path = new URL(href, location.origin).pathname;
+      const match = path.match(/\/category\/([^/?#]+)/i);
+      return match ? canonicalSlug(decodeURIComponent(match[1])) : '';
+    }catch(e){ return ''; }
+  }
+
+  function normalizedPath(url){
+    try{
+      return new URL(url, location.origin).pathname.replace(/\/+$/,'').toLowerCase();
+    }catch(e){ return ''; }
+  }
+
+  function loadCentralIndex(){
+    if (window.CETI_CATEGORY_INDEX && window.CETI_CATEGORY_INDEX.posts){
+      return Promise.resolve(window.CETI_CATEGORY_INDEX);
+    }
+    if (window.CETI_CATEGORY_INDEX_PROMISE) return window.CETI_CATEGORY_INDEX_PROMISE;
+    window.CETI_CATEGORY_INDEX_PROMISE = new Promise(function(resolve){
+      const script = document.createElement('script');
+      script.async = true;
+      script.src = INDEX_URL + '?v=' + Math.floor(Date.now()/INDEX_BUCKET_MS);
+      script.onload = function(){
+        resolve(window.CETI_CATEGORY_INDEX && window.CETI_CATEGORY_INDEX.posts
+          ? window.CETI_CATEGORY_INDEX : null);
+      };
+      script.onerror = function(){ resolve(null); };
+      document.head.appendChild(script);
+    });
+    return window.CETI_CATEGORY_INDEX_PROMISE;
+  }
+
+  const $posts = $('.wsite-blog-index #wsite-content > .blog-post');
+  if (!$posts.length) return;
+
+  const idToPost = {};
+  const need = new Set();
+  $posts.each(function(){
+    if (!this.id) return;
+    idToPost[this.id] = $(this);
+    need.add(this.id);
+  });
+  if (!need.size) return;
+
+  /* Numa página de categoria o próprio URL é a fonte mais rápida e exacta. */
+  const currentCategory = slugFromHref(location.href);
+  if (currentCategory && CETI_CAT_STYLE[currentCategory]){
+    let label = PRETTY_LABELS[currentCategory] || currentCategory.replace(/-/g,' ');
+    $('.blog-category-list a').each(function(){
+      if (slugFromHref(this.href) === currentCategory){
+        label = PRETTY_LABELS[currentCategory] || $(this).text().trim() || label;
+        return false;
+      }
+    });
+    $posts.each(function(){ applyCategory(this.id, currentCategory, label); });
+    return;
+  }
+
+  $posts.each(function(){
+    const image = $(this).find('.wsite-image').get(0);
+    if (image && !image.querySelector('.img-tint')){
+      const tint = document.createElement('span');
+      tint.className = 'img-tint';
+      image.appendChild(tint);
+    }
+  });
+
+  loadCentralIndex().then(function(index){
+    if (index && index.posts){
+      Array.from(need).forEach(function(id){
+        const record = index.posts[id];
+        if (!record) return;
+        const slug = canonicalSlug(record.primary || (record.categories || [])[0]);
+        if (CETI_CAT_STYLE[slug]) applyCategory(id, slug);
+      });
+    }
+    if (need.size) applyRecentPostsFromFeed();
+  });
+
+  /* Só é usado para um post publicado antes da próxima actualização de 15 minutos. */
+  function applyRecentPostsFromFeed(){
+    $.ajax({ url:FEED_URL, method:'GET', dataType:'text', timeout:FEED_TIMEOUT_MS })
+      .done(function(xmlText){
+        try{
+          const xml = new DOMParser().parseFromString(xmlText, 'text/xml');
+          const byPath = {};
+          Array.prototype.forEach.call(xml.getElementsByTagName('item'), function(item){
+            const link = item.getElementsByTagName('link')[0];
+            const category = item.getElementsByTagName('category')[0];
+            if (!link || !category) return;
+            const slug = canonicalSlug(category.textContent);
+            if (CETI_CAT_STYLE[slug]) byPath[normalizedPath(link.textContent)] = slug;
+          });
+          Array.from(need).forEach(function(id){
+            const $post = idToPost[id];
+            const href = $post.find('a.blog-title-link').first().attr('href') || '';
+            const slug = byPath[normalizedPath(href)];
+            if (slug) applyCategory(id, slug);
+          });
+        }catch(e){}
+      });
+  }
+
+  function applyCategory(id, slug, label){
+    slug = canonicalSlug(slug);
+    const style = CETI_CAT_STYLE[slug];
+    const $post = idToPost[id];
+    if (!$post || !style){ need.delete(id); return; }
+
+    const image = $post.find('.wsite-image').get(0);
+    if (image){
+      let tint = image.querySelector('.img-tint');
+      if (!tint){
+        tint = document.createElement('span');
+        tint.className = 'img-tint';
+        image.appendChild(tint);
+      }
+      tint.style.backgroundColor = style.bg;
+    }
+
+    if (!$post.find('.ceti-cat-wrap').length){
+      const nice = PRETTY_LABELS[slug] || label || slug.replace(/-/g,' ');
+      const $wrap = $('<div class="ceti-cat-wrap"></div>');
+      const $link = $('<a class="ceti-cat-pill"></a>')
+        .attr('href', CAT_BASE + slug)
+        .css({ background:style.bg, color:style.text,
+          border:'3px solid '+style.border, fontSize:(style.size || 14)+'px' });
+      if (style.icon){
+        $link.append($('<img>', { src:style.icon, alt:'' })
+          .css({ height:(style.size || 14)+'px', width:'auto', verticalAlign:'middle' }));
+        $link.append(document.createTextNode(' ' + nice.toUpperCase()));
+      } else {
+        $link.text(nice.toUpperCase());
+      }
+      $wrap.append($link);
+      $post.prepend($wrap);
+    }
+    need.delete(id);
+  }
+})(jQuery);
+</script>
