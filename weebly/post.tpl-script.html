@@ -1,0 +1,224 @@
+<script>
+var CETI_CAT_STYLE = {
+  "cobertura-oscar":      { bg:"#ffffff", text:"#ffc00d", border:"#ffc00d", icon:"https://i.imgur.com/jHtZrjF.png", size:15 },
+  "oscar":                { bg:"#ffffff", text:"#ffc00d", border:"#ffc00d", icon:"https://i.imgur.com/jHtZrjF.png", size:15 },
+  "alerta-oscar":         { bg:"#E31F25", text:"#FFFFFF", border:"#E31F25", icon:"https://i.imgur.com/VJ62uoC.png", size:15 },
+  "premiacao-preoscar":   { bg:"#BE8E23", text:"#FFFFFF", border:"#BE8E23", icon:"https://i.imgur.com/FnNvkZt.png", size:15 },
+  "especial":             { bg:"#E0A800", text:"#ffffff", border:"#ffffff", icon:"https://i.imgur.com/DwXZEdQ.png", size:15 },
+  "festival-de-cannes":   { bg:"#2B2B2A", text:"#FFFFFF", border:"#FFFFFF", icon:"https://i.imgur.com/iuI6309.png", size:15 },
+  "festival-de-veneza":   { bg:"#2B2B2A", text:"#FFFFFF", border:"#FFFFFF", icon:"https://i.imgur.com/nhAQyFm.png", size:15 },
+  "festival-de-sundance": { bg:"#2B2B2A", text:"#FFFFFF", border:"#FFFFFF", icon:"https://i.imgur.com/PmgcCYQ.png", size:15 },
+  "festival-de-toronto":  { bg:"#2B2B2A", text:"#FFFFFF", border:"#FFFFFF", icon:"https://i.imgur.com/0Y2ALd0.png", size:15 },
+  "festival-de-nova-york":{ bg:"#2B2B2A", text:"#FFFFFF", border:"#FFFFFF", icon:"https://i.imgur.com/rEVSlTZ.png", size:15 },
+  "festival-de-telluride":{ bg:"#2B2B2A", text:"#FFFFFF", border:"#FFFFFF", icon:"https://i.imgur.com/iKNOsWK.png", size:15 },
+  "festival-de-berlim":   { bg:"#2B2B2A", text:"#FFFFFF", border:"#FFFFFF", icon:"https://i.imgur.com/s8u4nz3.png", size:15 },
+  "festival-de-londres":  { bg:"#2B2B2A", text:"#FFFFFF", border:"#FFFFFF", icon:"https://i.imgur.com/LCNAvNZ.png", size:15 },
+  "termometro-de-sexta":  { bg:"#F07F1B", text:"#FFFFFF", border:"#F07F1B", icon:"https://i.imgur.com/RpFW5Uc.png", size:15 },
+  "noticias-do-dia":      { bg:"#FFC100", text:"#000000", border:"#FFC100", icon:"https://i.imgur.com/H6vzBd6.png", size:15 },
+  "trailer":              { bg:"#D2CEE8", text:"#000000", border:"#D2CEE8", icon:"https://i.imgur.com/tBkfNVb.png", size:15 },
+  "poster":               { bg:"#F08684", text:"#000000", border:"#F08684", icon:"https://i.imgur.com/tJrokmm.png", size:15 },
+  "novidade":             { bg:"#B0CB21", text:"#000000", border:"#B0CB21", icon:"https://i.imgur.com/NnoFHki.png", size:15 },
+  "podcast":              { bg:"#A8604B", text:"#FFFFFF", border:"#A8604B", icon:"https://i.imgur.com/mxKI3pP.png", size:15 },
+  "primeira-foto":        { bg:"#A2DAF8", text:"#000000", border:"#A2DAF8", icon:"https://i.imgur.com/lsZGAZ6.png", size:15 },
+  "in-memoriam":          { bg:"#B3B3B4", text:"#000000", border:"#B3B3B4", icon:"https://i.imgur.com/szuTp5Q.png", size:15 },
+  "in-memorian":          { bg:"#B3B3B4", text:"#000000", border:"#B3B3B4", icon:"https://i.imgur.com/szuTp5Q.png", size:15 },
+  "bastidores":           { bg:"#4E897C", text:"#FFFFFF", border:"#4E897C", icon:"https://i.imgur.com/s3WVBtt.png", size:15 },
+  "urgente":              { bg:"#E51C4C", text:"#FFFFFF", border:"#E51C4C", icon:"https://i.imgur.com/jhphJf0.png", size:15 },
+  "exclusivo":            { bg:"#FA9666", text:"#000000", border:"#FA9666", icon:"https://i.imgur.com/gEaEDMI.png", size:15 }
+};
+
+var PRETTY_LABELS = {
+  "poster": "Pôster",
+  "termometro-de-sexta": "Termômetro de Sexta",
+  "premiacao-preoscar": "Premiação Pré-Oscar",
+  "noticias-do-dia": "Notícias do Dia"
+};
+
+function cetiCanonicalSlug(value){
+  var slug = (value || '').toString().trim().toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .replace(/\s+/g,'-').replace(/[^a-z0-9-]/g,'').replace(/-+/g,'-');
+  if (slug === 'premiacao-pre-oscar') return 'premiacao-preoscar';
+  if (slug === 'in-memorian') return 'in-memoriam';
+  return slug;
+}
+
+function cetiCategoryFromUrl(url){
+  try{
+    var path = new URL(url, location.origin).pathname;
+    var match = path.match(/\/category\/([^/?#]+)/i);
+    return match ? cetiCanonicalSlug(decodeURIComponent(match[1])) : '';
+  }catch(e){ return ''; }
+}
+
+function cetiNormalizedPath(url){
+  try{
+    return new URL(url, location.origin).pathname.replace(/\/+$/,'').toLowerCase();
+  }catch(e){ return ''; }
+}
+
+function cetiLoadCentralIndex(){
+  if (window.CETI_CATEGORY_INDEX && window.CETI_CATEGORY_INDEX.posts){
+    return Promise.resolve(window.CETI_CATEGORY_INDEX);
+  }
+  if (window.CETI_CATEGORY_INDEX_PROMISE) return window.CETI_CATEGORY_INDEX_PROMISE;
+  window.CETI_CATEGORY_INDEX_PROMISE = new Promise(function(resolve){
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://paulomonte123456.github.io/termometro-category-index/categorias.js?v=' +
+      Math.floor(Date.now()/(15*60*1000));
+    script.onload = function(){
+      resolve(window.CETI_CATEGORY_INDEX && window.CETI_CATEGORY_INDEX.posts
+        ? window.CETI_CATEGORY_INDEX : null);
+    };
+    script.onerror = function(){ resolve(null); };
+    document.head.appendChild(script);
+  });
+  return window.CETI_CATEGORY_INDEX_PROMISE;
+}
+
+jQuery(function($){
+  if (!document.body.classList.contains('wsite-blog-post')) return;
+
+  var $post = $('.wsite-blog-post .blog-post').first();
+  var postId = $post.attr('id');
+  if (!postId) return;
+
+  var CAT_BASE = '/cinema-eacute-tudo-isso---blog/category/';
+  var FEED_URL = '/cinema-eacute-tudo-isso---blog/feed';
+  var CACHE_TTL_MS = 7*24*60*60*1000;
+  var FEED_TIMEOUT_MS = 8000;
+  var cacheKey = 'cetiCentralCatV1:' + postId;
+  var currentSlug = '';
+
+  function catObject(slug, label){
+    slug = cetiCanonicalSlug(slug);
+    return { slug:slug, url:CAT_BASE+slug,
+      label:PRETTY_LABELS[slug] || label || slug.replace(/-/g,' ') };
+  }
+
+  function exportMarker(cat){
+    var el = $post.find('#categorialista').get(0);
+    if (!el || !cat) return;
+    el.setAttribute('data-ceti-cat', cat.slug);
+    el.setAttribute('data-label', cat.label);
+    el.innerHTML = '';
+  }
+
+  function buildPillContent(link, cat){
+    var style = CETI_CAT_STYLE[cat.slug];
+    if (!style) return;
+    link.setAttribute('href', CAT_BASE + cat.slug);
+    link.style.background = style.bg;
+    link.style.color = style.text;
+    link.style.border = '2px solid ' + style.border;
+    link.style.fontSize = (style.size || 14) + 'px';
+    document.body.style.setProperty('--cat-bg', style.bg);
+    if (style.icon){
+      var image = new Image();
+      image.src = style.icon;
+      image.alt = '';
+      image.style.height = (style.size || 14) + 'px';
+      image.style.width = 'auto';
+      link.appendChild(image);
+      link.appendChild(document.createTextNode(' ' + cat.label));
+    } else {
+      link.appendChild(document.createTextNode(cat.label));
+    }
+  }
+
+  function saveCurrent(cat){
+    try{
+      localStorage.setItem(cacheKey, JSON.stringify({
+        slug:cat.slug, label:cat.label, exp:Date.now()+CACHE_TTL_MS
+      }));
+    }catch(e){}
+  }
+
+  function showCategory(cat, save){
+    if (!cat || !CETI_CAT_STYLE[cat.slug]) return;
+    currentSlug = cat.slug;
+    var link = $post.find('.ceti-cat-wrap .ceti-cat-pill').get(0);
+    if (!link){
+      var wrap = document.createElement('div');
+      wrap.className = 'ceti-cat-wrap';
+      link = document.createElement('a');
+      link.className = 'ceti-cat-pill';
+      wrap.appendChild(link);
+      $post.prepend(wrap);
+    }
+    while (link.firstChild) link.removeChild(link.firstChild);
+    buildPillContent(link, cat);
+    exportMarker(cat);
+    if (save) saveCurrent(cat);
+  }
+
+  /* Uma categoria manual no HTML continua a ter prioridade absoluta. */
+  var manual = ($post.find('[data-ceti-cat]').attr('data-ceti-cat') || '').trim();
+  manual = cetiCanonicalSlug(manual);
+  if (manual && CETI_CAT_STYLE[manual]){
+    showCategory(catObject(manual), false);
+    return;
+  }
+
+  /* O cache só contém resultados anteriores do índice central e aparece já. */
+  try{
+    var cached = JSON.parse(localStorage.getItem(cacheKey) || 'null');
+    if (cached && cached.exp > Date.now() && CETI_CAT_STYLE[cetiCanonicalSlug(cached.slug)]){
+      showCategory(catObject(cached.slug, cached.label), false);
+    } else {
+      localStorage.removeItem(cacheKey);
+    }
+  }catch(e){}
+
+  cetiLoadCentralIndex().then(function(index){
+    var record = index && index.posts ? index.posts[postId] : null;
+    if (record){
+      var slug = cetiCanonicalSlug(record.primary || (record.categories || [])[0]);
+      if (CETI_CAT_STYLE[slug]){
+        if (slug !== currentSlug) showCategory(catObject(slug), true);
+        else saveCurrent(catObject(slug));
+        return;
+      }
+    }
+    if (currentSlug) return;
+
+    /* Post ainda não indexado: usa a categoria da página de origem. */
+    var refSlug = cetiCategoryFromUrl(document.referrer || '');
+    if (refSlug && CETI_CAT_STYLE[refSlug]){
+      showCategory(catObject(refSlug), true);
+      return;
+    }
+    findInFeed();
+  });
+
+  function findInFeed(){
+    $.ajax({ url:FEED_URL, method:'GET', dataType:'text', timeout:FEED_TIMEOUT_MS })
+      .done(function(xmlText){
+        try{
+          var xml = new DOMParser().parseFromString(xmlText, 'text/xml');
+          var currentPath = cetiNormalizedPath(location.href);
+          var items = Array.prototype.slice.call(xml.getElementsByTagName('item'));
+          for (var i=0; i<items.length; i++){
+            var link = items[i].getElementsByTagName('link')[0];
+            if (!link || cetiNormalizedPath(link.textContent) !== currentPath) continue;
+            var categories = items[i].getElementsByTagName('category');
+            for (var j=0; j<categories.length; j++){
+              var label = (categories[j].textContent || '').trim();
+              var slug = cetiCanonicalSlug(label);
+              if (CETI_CAT_STYLE[slug]){
+                showCategory(catObject(slug, label), true);
+                return;
+              }
+            }
+          }
+        }catch(e){}
+      });
+  }
+
+  $('.blog-category-list a').each(function(){
+    var slug = cetiCategoryFromUrl(this.href);
+    if (PRETTY_LABELS[slug]) this.textContent = PRETTY_LABELS[slug];
+  });
+});
+</script>
