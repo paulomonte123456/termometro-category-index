@@ -1,0 +1,14 @@
+{
+  "name": "termometro-category-index",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:full": "node scripts/build-index.mjs --mode full",
+    "build:incremental": "node scripts/build-index.mjs --mode incremental",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
