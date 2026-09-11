@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-11T12:50:53.236Z",
+  "generatedAt": "2026-09-11T14:21:43.065Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -1940,6 +1940,13 @@
         "premiacao-preoscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/uma-batalha-apos-a-outra-e-o-grande-vencedor-do-producers-guilds-awards-2026-a-premiacao-do-sindicato-dos-produtores"
+    },
+    "blog-post-389112758827752385": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/finlandia-escolhe-a-comedia-de-ficcao-cientifica-the-squirrel-como-seu-representante-ao-oscar-2027-de-melhor-filme-internacional"
     },
     "blog-post-389778828509218410": {
       "primary": "noticias-do-dia",
