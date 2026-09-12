@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-12T13:18:28.395Z",
+  "generatedAt": "2026-09-12T18:57:33.412Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -1688,6 +1688,13 @@
         "in-memoriam"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/adeus-diane-ladd"
+    },
+    "blog-post-345059925861958573": {
+      "primary": "festival-de-veneza",
+      "categories": [
+        "festival-de-veneza"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/woman-unknown-de-may-el-toukhy-leva-o-leao-de-ouro-vencendo-como-melhor-filme-no-festival-de-veneza-2026"
     },
     "blog-post-345483906130858776": {
       "primary": "noticias-do-dia",
