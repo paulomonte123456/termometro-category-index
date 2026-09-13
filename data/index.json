@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-13T14:44:08.347Z",
+  "generatedAt": "2026-09-13T17:57:34.057Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -722,6 +722,13 @@
         "cobertura-oscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/armenia-escolhe-o-documentario-my-armenian-phantoms-como-o-seu-representante-ao-oscar-2026-de-melhor-filme-internacional"
+    },
+    "blog-post-209590987392365051": {
+      "primary": "bastidores",
+      "categories": [
+        "bastidores"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/maggie-gylenhaal-presidente-do-juri-de-veneza-diz-que-woman-unknown-nao-foi-escolhido-como-vencedor-por-ser-apenas-o-unico-filme-dirigido-por-uma-mulher-em-competicao"
     },
     "blog-post-210635576619917708": {
       "primary": "festival-de-londres",
