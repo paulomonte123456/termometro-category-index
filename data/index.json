@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-13T04:24:31.304Z",
+  "generatedAt": "2026-09-13T12:48:24.442Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -988,6 +988,13 @@
         "poster"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/jeremy-strong-e-mikey-madison-estao-nos-primeiros-posteres-de-o-outro-lado-das-redes-que-fazem-referencia-direta-aos-posteres-de-a-rede-social"
+    },
+    "blog-post-255481536543070100": {
+      "primary": "festival-de-toronto",
+      "categories": [
+        "festival-de-toronto"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/festival-de-toronto-2026-being-heumann-de-sian-heder-diretora-de-no-ritmo-do-coracao-conquista-o-publico-e-pode-chegar-forte-para-a-temporada-de-premios"
     },
     "blog-post-255584299558412951": {
       "primary": "poster",
