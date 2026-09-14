@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-14T13:23:40.533Z",
+  "generatedAt": "2026-09-14T18:23:47.098Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -5384,6 +5384,13 @@
         "novidade"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/o-urso-paddington-e-confirmado-como-um-dos-apresentadores-do-bafta-2026"
+    },
+    "blog-post-937930062632256009": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/franca-divulga-os-5-filmes-que-estao-na-votacao-final-para-representar-o-pais-no-oscar-2027-de-melhor-filme-internacional"
     },
     "blog-post-938750299394827137": {
       "primary": "in-memoriam",
