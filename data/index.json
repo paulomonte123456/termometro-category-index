@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-14T12:27:05.753Z",
+  "generatedAt": "2026-09-14T13:23:40.533Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -2921,6 +2921,13 @@
       ],
       "path": "/cinema-eacute-tudo-isso---blog/cazaquistao-escolhe-o-terror-cadet-sobre-um-garoto-que-sofre-na-academia-militar-por-causa-de-sua-aparencia-como-seu-representante-ao-oscar-2026-de-melhor-filme-internacional"
     },
+    "blog-post-541476178942349330": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/georgia-escolhe-guria-com-passagem-por-veneza-como-o-seu-representante-ao-oscar-2027-de-melhor-filme-internacional"
+    },
     "blog-post-542164752470019178": {
       "primary": "cobertura-oscar",
       "categories": [
@@ -4334,6 +4341,13 @@
         "premiacao-preoscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/uma-batalha-apos-a-outra-vence-como-melhor-filme-no-gotham-awards-2025"
+    },
+    "blog-post-770048038946089361": {
+      "primary": "festival-de-toronto",
+      "categories": [
+        "festival-de-toronto"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/festival-de-toronto-2026-the-last-photograph-e-chamado-de-o-pior-filme-da-carreira-de-zack-snyder"
     },
     "blog-post-770482169719936105": {
       "primary": "premiacao-preoscar",
