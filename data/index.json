@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-15T18:38:09.762Z",
+  "generatedAt": "2026-09-15T21:44:37.168Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -3424,6 +3424,13 @@
         "termometro-de-sexta"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/termometro-de-sexta-os-10-filmes-mais-misteriosos-da-temporada-oscar-2027"
+    },
+    "blog-post-613412780218228646": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/portugal-em-busca-de-sua-primeira-indicacao-escolhe-a-memoria-do-cheiro-das-coisas-como-o-seu-representante-ao-oscar-2027-de-melhor-filme-internacional"
     },
     "blog-post-614009748277733265": {
       "primary": "premiacao-preoscar",
