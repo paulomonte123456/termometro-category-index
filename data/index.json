@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-17T11:20:18.764Z",
+  "generatedAt": "2026-09-17T11:34:08.973Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -4565,6 +4565,13 @@
         "noticias-do-dia"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/em-busca-do-oscar-de-melhor-filme-netflix-vai-deixar-la-bola-negra-com-uma-janela-de-3-semanas-nos-cinemas"
+    },
+    "blog-post-793190655879856551": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/holanda-escolhe-o-documentario-paikar-como-seu-representante-ao-oscar-2027-de-melhor-filme-internacional"
     },
     "blog-post-796425596375923334": {
       "primary": "bastidores",
