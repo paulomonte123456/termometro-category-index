@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-18T14:20:36.295Z",
+  "generatedAt": "2026-09-18T17:43:07.834Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -3375,6 +3375,13 @@
         "cobertura-oscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/oscar-2026-com-filmes-como-wicked-parte-2-uma-batalha-apos-a-outra-e-sirat-confira-a-shortlist-das-categorias-de-trilha-sonora-cancao-original-e-melhor-som"
+    },
+    "blog-post-599393903469725842": {
+      "primary": "novidade",
+      "categories": [
+        "novidade"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/vencedor-de-melhor-documentario-da-categoria-internacional-de-sundance-tambem-vai-automaticamente-estar-elegivel-para-o-oscar-de-melhor-filme-internacional"
     },
     "blog-post-600332394968713167": {
       "primary": "cobertura-oscar",
