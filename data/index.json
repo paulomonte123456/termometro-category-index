@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-18T11:57:51.120Z",
+  "generatedAt": "2026-09-18T14:20:36.295Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -400,6 +400,13 @@
         "termometro-de-sexta"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/termometro-de-sexta-top-10-paises-que-mais-foram-indicados-para-o-oscar-de-melhor-filme-internacional-mas-nunca-tiveram-uma-vitoria"
+    },
+    "blog-post-161584655885110577": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/egito-escolhe-the-stories-como-seu-representante-ao-oscar-2027-de-melhor-filme-internacional"
     },
     "blog-post-161729741588625902": {
       "primary": "in-memoriam",
