@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-20T15:57:36.911Z",
+  "generatedAt": "2026-09-20T16:19:51.848Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -2787,6 +2787,13 @@
         "premiacao-preoscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/uma-batalha-apos-a-outra-vence-o-toronto-film-critics-association-awards-2025-ethan-hawke-vence-o-premio-de-melhor-atuacao-por-blue-moon"
+    },
+    "blog-post-521869113780694343": {
+      "primary": "festival-de-toronto",
+      "categories": [
+        "festival-de-toronto"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/la-bola-negra-de-javier-calvo-e-javier-ambrossi-vence-o-festival-de-toronto-2026-e-ganha-destaque-para-a-corrida-do-oscar-2027"
     },
     "blog-post-522119933580253343": {
       "primary": "bastidores",
