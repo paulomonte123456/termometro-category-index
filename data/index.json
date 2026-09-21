@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-21T13:48:01.989Z",
+  "generatedAt": "2026-09-21T19:33:22.406Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -2080,6 +2080,13 @@
         "cobertura-oscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/peru-escolhe-motherland-como-seu-representante-ao-oscar-2026-de-melhor-filme-internacional"
+    },
+    "blog-post-399423120940598006": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/el-salvador-participa-pela-primeira-vez-na-historia-e-escolhe-vertices-como-seu-representante-ao-oscar-2027-de-melhor-filme-internacional"
     },
     "blog-post-399850045807293989": {
       "primary": "in-memoriam",
