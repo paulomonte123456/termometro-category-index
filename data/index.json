@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-20T16:19:51.848Z",
+  "generatedAt": "2026-09-21T12:24:11.524Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -3438,6 +3438,13 @@
         "premiacao-preoscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/sag-awards-muda-oficialmente-de-nome-e-agora-se-chama-the-actor-awards"
+    },
+    "blog-post-604259845114368265": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/india-escolhe-gondhal-como-seu-representante-ao-oscar-2027-de-melhor-filme-internacional"
     },
     "blog-post-604716649438057323": {
       "primary": "cobertura-oscar",
