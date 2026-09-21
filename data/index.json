@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-21T12:24:11.524Z",
+  "generatedAt": "2026-09-21T13:48:01.989Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -3207,6 +3207,13 @@
         "especial"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/os-maiores-esnobados-e-as-maiores-surpresas-do-globo-de-ouro-2026"
+    },
+    "blog-post-575789752273999239": {
+      "primary": "trailer",
+      "categories": [
+        "trailer"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/netflix-lanca-o-primeiro-trailer-de-the-further-mis-adventures-of-cliff-booth-de-david-fincher-e-roteiro-de-quentin-tarantino"
     },
     "blog-post-575907977409764543": {
       "primary": "festival-de-cannes",
