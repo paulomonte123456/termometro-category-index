@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-22T11:58:07.559Z",
+  "generatedAt": "2026-09-22T12:25:12.345Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -3263,6 +3263,13 @@
         "festival-de-toronto"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/coracao-de-lutador-the-smashing-machine-estrelado-por-dwayne-johnson-passa-de-querido-de-veneza-para-uma-estreia-pouco-falada-em-toronto"
+    },
+    "blog-post-578310857771781579": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/chade-escolhe-soumsoum-the-night-of-the-stars-premiado-em-berlim-como-seu-representante-ao-oscar-2027-de-melhor-filme-internacional"
     },
     "blog-post-579369556908369204": {
       "primary": "especial",
