@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-22T12:25:12.345Z",
+  "generatedAt": "2026-09-23T12:25:41.210Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -988,6 +988,13 @@
         "in-memoriam"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/adeus-robert-redford"
+    },
+    "blog-post-246580054461490117": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/albania-escolhe-o-documentario-a-state-film-como-seu-representante-ao-oscar-2027-de-melhor-filme-internacional"
     },
     "blog-post-246987237584069606": {
       "primary": "termometro-de-sexta",
@@ -5412,6 +5419,13 @@
         "cobertura-oscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/suecia-escolhe-eagles-of-the-republic-que-fez-a-estreia-no-festival-de-cannes-como-seu-representante-ao-oscar-2026-de-melhor-filme-internacional"
+    },
+    "blog-post-905203699823681270": {
+      "primary": "poster",
+      "categories": [
+        "poster"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/neon-divulga-trailer-e-poster-de-paper-tiger-e-planeja-fazer-uma-grande-campanha-para-james-gray-finalmente-ser-indicado-ao-oscar"
     },
     "blog-post-905947457501753902": {
       "primary": "cobertura-oscar",
