@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-27T12:24:45.329Z",
+  "generatedAt": "2026-09-27T12:49:55.273Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -463,6 +463,13 @@
         "festival-de-cannes"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/festival-de-cannes-2026-dia-10-the-black-ball-e-aplaudido-por-20-minutos-o-segundo-maior-tempo-da-historia-e-coward-e-um-belo-drama-de-amor-queer-durante-os-horrores-da-primeira-guerra"
+    },
+    "blog-post-168341609773427235": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/helen-mirren-vai-fazer-campanha-para-o-oscar-2027-de-melhor-atriz-por-a-talent-for-murder"
     },
     "blog-post-169618144107832315": {
       "primary": "festival-de-toronto",
