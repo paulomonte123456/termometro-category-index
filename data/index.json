@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-28T15:36:25.463Z",
+  "generatedAt": "2026-09-28T21:46:42.606Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -960,6 +960,13 @@
         "premiacao-preoscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/paul-thomas-anderson-de-uma-batalha-apos-a-outra-e-o-grande-vencedor-do-directors-guild-awards-2026-a-premiacao-do-sindicato-dos-diretores"
+    },
+    "blog-post-233932820206905500": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/cuba-escolhe-malecon-como-seu-representante-ao-oscar-2027-de-melhor-filme-internacional"
     },
     "blog-post-234975637439367250": {
       "primary": "premiacao-preoscar",
