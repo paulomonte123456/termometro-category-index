@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-30T12:31:02.034Z",
+  "generatedAt": "2026-09-30T14:53:31.479Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -3788,6 +3788,13 @@
         "cobertura-oscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/faltam-22-dias-para-o-oscar-2026"
+    },
+    "blog-post-644366173251061599": {
+      "primary": "bastidores",
+      "categories": [
+        "bastidores"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/barry-jenkins-diz-que-fez-terapia-por-causa-da-confusao-entre-la-la-land-e-moonlight-na-categoria-de-melhor-filme-do-oscar-2017"
     },
     "blog-post-646541111911050833": {
       "primary": "especial",
