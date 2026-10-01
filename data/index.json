@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-01T12:30:30.285Z",
+  "generatedAt": "2026-10-01T14:28:22.324Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -995,6 +995,13 @@
         "premiacao-preoscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/com-o-brasileiro-adolpho-veloso-de-sonhos-de-trem-conheca-os-indicados-ao-american-society-of-cinematographers-awards-2026-a-premiacao-dos-profissionais-de-fotografia"
+    },
+    "blog-post-241031498380789542": {
+      "primary": "premiacao-preoscar",
+      "categories": [
+        "premiacao-preoscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/obsessao-e-inscrito-nas-categorias-de-comedia-ou-musical-para-o-globo-de-ouro-2027"
     },
     "blog-post-243583880613862800": {
       "primary": "in-memoriam",
