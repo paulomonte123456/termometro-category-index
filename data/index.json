@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-02T19:49:09.598Z",
+  "generatedAt": "2026-10-03T14:48:35.422Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -1030,6 +1030,13 @@
         "noticias-do-dia"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/musk-documentario-feito-durante-4-anos-sobre-a-figura-polemica-de-elon-musk-fara-campanha-para-a-categoria-de-melhor-filme-no-oscar-2027"
+    },
+    "blog-post-249844902475178423": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/cazaquistao-escolhe-abel-como-seu-representante-ao-oscar-2027-de-melhor-filme-internacional"
     },
     "blog-post-251054395837364692": {
       "primary": "termometro-de-sexta",
@@ -5489,6 +5496,13 @@
         "premiacao-preoscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/pecadores-vence-como-melhor-filme-no-houston-film-critics-awards-2025-jacob-elordi-e-amy-madigan-vencem-os-premios-de-atuacao-coadjuvante"
+    },
+    "blog-post-886895293739945792": {
+      "primary": "festival-de-nova-york",
+      "categories": [
+        "festival-de-nova-york"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/festival-de-nova-york-2026-behemoth-e-uma-carta-de-amor-aos-compositores-com-uma-otima-atuacao-de-pedro-pascal"
     },
     "blog-post-887298900489470302": {
       "primary": "in-memoriam",
