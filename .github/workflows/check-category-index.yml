@@ -105,17 +105,18 @@ jobs:
               }
             }
 
-                        const { data } =
-              await github.rest.actions.listWorkflowRunsForRepo({
+                                    const { data } =
+              await github.rest.actions.listWorkflowRuns({
                 ...repo,
+                workflow_id,
+                branch: 'main',
                 per_page: 100
               });
 
-            const expectedPath = `.github/workflows/${workflow_id}`;
+            const runs = data.workflow_runs || [];
 
-            const successes = data.workflow_runs
+            const successes = runs
               .filter(run =>
-                run.path?.split('@')[0] === expectedPath &&
                 run.head_branch === 'main' &&
                 run.status === 'completed' &&
                 run.conclusion === 'success'
@@ -126,11 +127,11 @@ jobs:
 
             const last = successes[0];
 
-            core.info(
-              last
-                ? `Último sucesso: #${last.run_number}, ${last.updated_at}`
-                : 'Nenhum sucesso encontrado nas últimas 100 execuções.'
-            );
+            if (last) {
+              core.info(
+                `Último sucesso: #${last.run_number}, ${last.updated_at}`
+              );
+            }
 
             if (
               !last ||
