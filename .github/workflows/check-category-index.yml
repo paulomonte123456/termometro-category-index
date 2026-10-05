@@ -105,16 +105,32 @@ jobs:
               }
             }
 
-            const { data } =
-              await github.rest.actions.listWorkflowRuns({
+                        const { data } =
+              await github.rest.actions.listWorkflowRunsForRepo({
                 ...repo,
-                workflow_id,
-                branch: 'main',
-                status: 'success',
-                per_page: 1
+                per_page: 100
               });
 
-            const last = data.workflow_runs[0];
+            const expectedPath = `.github/workflows/${workflow_id}`;
+
+            const successes = data.workflow_runs
+              .filter(run =>
+                run.path?.split('@')[0] === expectedPath &&
+                run.head_branch === 'main' &&
+                run.status === 'completed' &&
+                run.conclusion === 'success'
+              )
+              .sort((a, b) =>
+                Date.parse(b.updated_at) - Date.parse(a.updated_at)
+              );
+
+            const last = successes[0];
+
+            core.info(
+              last
+                ? `Último sucesso: #${last.run_number}, ${last.updated_at}`
+                : 'Nenhum sucesso encontrado nas últimas 100 execuções.'
+            );
 
             if (
               !last ||
