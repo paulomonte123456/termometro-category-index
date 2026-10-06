@@ -35,29 +35,24 @@ jobs:
     timeout-minutes: 180
 
     outputs:
-      changed: ${{ steps.index.outputs.changed }}
+      publish: ${{ steps.publish.outputs.publish }}
 
     steps:
       - name: Obter repositório
         uses: actions/checkout@v4
+        with:
+          ref: main
 
       - name: Preparar Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
 
-      - name: Instalar dependências
-        run: npm ci --ignore-scripts --no-audit --no-fund
-
       - name: Escolher atualização
         id: mode
         shell: bash
         run: |
           mode="incremental"
-
-          if [[ "${{ github.event_name }}" == "push" ]]; then
-            mode="full"
-          fi
 
           if [[ "${{ github.event.schedule }}" == "13 4 * * 0" ]]; then
             mode="full"
@@ -68,6 +63,11 @@ jobs:
           fi
 
           echo "mode=$mode" >> "$GITHUB_OUTPUT"
+
+      - name: Preservar estado anterior
+        shell: bash
+        run: |
+          cp data/index.json "$RUNNER_TEMP/category-before.json"
 
       - name: Gerar índice
         id: index
@@ -90,6 +90,24 @@ jobs:
 
           echo "changed=$changed" >> "$GITHUB_OUTPUT"
 
+      - name: Validar preservação dos posts
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          import path from 'node:path';
+          const before = JSON.parse(fs.readFileSync(path.join(process.env.RUNNER_TEMP, 'category-before.json')));
+          const after = JSON.parse(fs.readFileSync('public/categorias.json'));
+          if (after.version !== 1 || !after.posts || Array.isArray(after.posts) || typeof after.posts !== 'object' || !Object.keys(after.posts).length) throw new Error('Índice de categorias inválido ou vazio.');
+          const missing = Object.keys(before.posts).filter(id => !Object.hasOwn(after.posts, id));
+          if (missing.length) throw new Error(`Publicação bloqueada: ${missing.length} posts desapareceriam. O índice publicado foi preservado.`);
+          const state = JSON.parse(fs.readFileSync('data/index.json'));
+          if (JSON.stringify(state) !== JSON.stringify(after)) throw new Error('Estado e índice público não correspondem.');
+          const js = fs.readFileSync('public/categorias.js', 'utf8').trim();
+          if (js !== `window.CETI_CATEGORY_INDEX=${JSON.stringify(after)};`) throw new Error('categorias.js não corresponde ao JSON.');
+          console.log(`Verificado: ${Object.keys(before.posts).length} posts anteriores preservados; ${Object.keys(after.posts).length} posts no índice.`);
+          NODE
+
       - name: Guardar índice atualizado
         if: steps.index.outputs.changed == 'true'
         shell: bash
@@ -99,22 +117,43 @@ jobs:
 
           git add data/index.json public/categorias.json public/categorias.js
 
-          git commit -m "Atualizar índice de categorias"
-          git push
+          if ! git diff --cached --quiet; then
+            git commit -m "Atualizar índice de categorias"
+            git push origin HEAD:main
+          fi
+
+      - name: Verificar se a publicação precisa de atualização
+        id: publish
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        shell: bash
+        run: |
+          publish=true
+          if curl --fail --silent --show-error --location --retry 2 --max-time 30 \
+            "https://paulomonte123456.github.io/termometro-category-index/categorias.json" \
+            -o "$RUNNER_TEMP/category-published.json"; then
+            if cmp -s public/categorias.json "$RUNNER_TEMP/category-published.json"; then
+              publish=false
+            fi
+          fi
+          if [[ "$EVENT_NAME" == "push" || "$EVENT_NAME" == "workflow_dispatch" ]]; then
+            publish=true
+          fi
+          echo "publish=$publish" >> "$GITHUB_OUTPUT"
 
       - name: Configurar GitHub Pages
-        if: steps.index.outputs.changed == 'true'
+        if: steps.publish.outputs.publish == 'true'
         uses: actions/configure-pages@v5
 
       - name: Preparar publicação
-        if: steps.index.outputs.changed == 'true'
+        if: steps.publish.outputs.publish == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: public
 
   deploy:
     needs: build
-    if: needs.build.outputs.changed == 'true'
+    if: needs.build.outputs.publish == 'true'
 
     runs-on: ubuntu-latest
     timeout-minutes: 20
