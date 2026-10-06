@@ -29,29 +29,89 @@ jobs:
           script: |
             const hour = 60 * 60 * 1000;
             const now = Date.now();
-            const { data } = await github.rest.actions.listWorkflowRuns({
-              ...context.repo,
-              workflow_id: 'update-index.yml',
-              branch: 'main',
-              per_page: 100
-            });
-            const runs = (data.workflow_runs || [])
-              .filter(run => run.head_branch === 'main');
-            const successes = runs.filter(run =>
-              run.status === 'completed' && run.conclusion === 'success'
-            ).sort((a, b) => Date.parse(b.updated_at) - Date.parse(a.updated_at));
-            const last = successes[0];
+            const workflowFile = 'update-index.yml';
+            const workflowPath = '.github/workflows/' + workflowFile;
+            const belongs = run => run.head_branch === 'main' &&
+              String(run.path || '').split('@')[0] === workflowPath;
+            const newestSuccess = runs => runs.filter(run =>
+              run.status === 'completed' && run.conclusion === 'success' &&
+              Number.isFinite(Date.parse(run.updated_at))
+            ).sort((a, b) => Date.parse(b.updated_at) - Date.parse(a.updated_at))[0];
+            const recent = run => run && now - Date.parse(run.updated_at) <= 6 * hour &&
+              Date.parse(run.updated_at) <= Date.now();
+            const headers = { 'Cache-Control': 'no-cache' };
+            let runs = [];
+            try {
+              const { data } = await github.rest.actions.listWorkflowRuns({
+                ...context.repo, workflow_id: workflowFile,
+                branch: 'main', per_page: 100, headers
+              });
+              if (!Array.isArray(data.workflow_runs)) throw new Error('Histórico inválido');
+              runs = data.workflow_runs.filter(belongs);
+            } catch (error) {
+              core.warning(`Consulta inicial indisponível: ${error.message}. A confirmar por outra via.`);
+            }
+            let last = newestSuccess(runs);
+
+            // Uma lista antiga não basta para declarar uma paragem.
+            // Confirmar no histórico geral e consultar diretamente o sucesso encontrado.
+            if (!recent(last)) {
+              core.info('Sem sucesso recente na primeira consulta. A confirmar no histórico geral do repositório.');
+              const since = new Date(now - 24 * hour).toISOString();
+              let complete = false;
+              let verified = false;
+              const candidates = new Map(runs.map(run => [run.id, run]));
+              for (let page = 1; page <= 3; page++) {
+                const { data } = await github.rest.actions.listWorkflowRunsForRepo({
+                  ...context.repo, branch: 'main', created: '>=' + since,
+                  per_page: 100, page, headers
+                });
+                if (!Array.isArray(data.workflow_runs)) {
+                  throw new Error('Não foi possível confirmar o histórico: resposta inválida da API.');
+                }
+                const batch = data.workflow_runs;
+                if (batch.some(run => !Number.isFinite(Date.parse(run.created_at)) ||
+                    Date.parse(run.created_at) < Date.parse(since))) {
+                  throw new Error('Não foi possível confirmar o histórico: a API devolveu execuções fora do período pedido.');
+                }
+                const matching = batch.filter(belongs);
+                for (const run of matching) candidates.set(run.id, run);
+                const candidate = newestSuccess(matching);
+                if (recent(candidate)) {
+                  const { data: confirmed } = await github.rest.actions.getWorkflowRun({
+                    ...context.repo, run_id: candidate.id, headers
+                  });
+                  if (confirmed.id !== candidate.id || !belongs(confirmed) ||
+                      confirmed.status !== 'completed' || confirmed.conclusion !== 'success' ||
+                      !recent(confirmed)) {
+                    throw new Error('Não foi possível confirmar o histórico: a consulta direta diverge da lista de execuções.');
+                  }
+                  candidates.set(confirmed.id, confirmed);
+                  core.info(`Confirmação independente: sucesso #${confirmed.run_number}, ${confirmed.updated_at}. ${confirmed.html_url}`);
+                  verified = true;
+                  break;
+                }
+                if (batch.length < 100) {
+                  complete = true;
+                  break;
+                }
+              }
+              if (!verified && !complete) {
+                throw new Error('Não foi possível concluir a confirmação após 300 execuções. Não confundir consulta incompleta com índice parado.');
+              }
+              runs = [...candidates.values()];
+              last = newestSuccess(runs);
+              if (!verified && !recent(last)) {
+                core.setFailed(last
+                  ? `Sem sucesso nas últimas 6 horas, após confirmação no histórico geral. Último sucesso: ${last.html_url}`
+                  : 'Nenhum sucesso encontrado após confirmação no histórico geral das últimas 24 horas.');
+              }
+            }
             const latest = [...runs].sort((a, b) =>
               Date.parse(b.created_at) - Date.parse(a.created_at)
             )[0];
-
             if (last) {
               core.info(`Último sucesso: #${last.run_number}, ${last.updated_at}. ${last.html_url}`);
-            }
-            if (!last || now - Date.parse(last.updated_at) > 6 * hour) {
-              core.setFailed(last
-                ? `Último sucesso há mais de 6 horas: ${last.html_url}`
-                : 'Nenhum sucesso entre as últimas 100 atualizações. Consultar o histórico de Actions.');
             }
             if (latest) {
               core.info(`Última execução: #${latest.run_number}, ${latest.status}/${latest.conclusion || 'a aguardar'}. ${latest.html_url}`);
