@@ -10,7 +10,7 @@ on:
       - ".github/workflows/check-category-index.yml"
 
 permissions:
-  actions: write
+  actions: read
   contents: read
 
 concurrency:
@@ -21,138 +21,74 @@ jobs:
   check:
     runs-on: ubuntu-latest
     timeout-minutes: 5
-
     steps:
-      - name: Verificar execuções bloqueadas
+      - name: Verificar atualização e índice publicado
         uses: actions/github-script@v7
         with:
+          retries: 3
           script: |
-            const repo = context.repo;
-            const workflow_id = 'update-index.yml';
             const hour = 60 * 60 * 1000;
-
-            const old = run =>
-              Date.now() - Date.parse(run.updated_at) > hour;
-
-            let cancelled = 0;
-
-            const runs = await github.paginate(
-              github.rest.actions.listWorkflowRuns,
-              {
-                ...repo,
-                workflow_id,
-                status: 'waiting',
-                per_page: 100
-              }
-            );
-
-            for (const run of runs) {
-              if (run.head_branch !== 'main' || !old(run)) {
-                continue;
-              }
-
-              const args = {
-                ...repo,
-                run_id: run.id
-              };
-
-              const { data: current } =
-                await github.rest.actions.getWorkflowRun(args);
-
-              if (current.status !== 'waiting' || !old(current)) {
-                continue;
-              }
-
-              const { data: pending } =
-                await github.rest.actions.getPendingDeploymentsForRun(args);
-
-              const matches =
-                pending.length > 0 &&
-                pending.every(p =>
-                  p.environment?.name === 'github-pages' &&
-                  Array.isArray(p.reviewers) &&
-                  p.reviewers.length === 0 &&
-                  p.wait_timer === 0
-                );
-
-              if (!matches) {
-                core.setFailed(
-                  `Execução #${run.run_number} em espera: ` +
-                  `verificar as regras de aprovação. ${run.html_url}`
-                );
-                continue;
-              }
-
-              try {
-                await github.rest.actions.cancelWorkflowRun(args);
-                cancelled++;
-
-                core.notice(
-                  `Cancelamento solicitado para #${run.run_number}, ` +
-                  'em espera há mais de uma hora.'
-                );
-              } catch (error) {
-                const { data: after } =
-                  await github.rest.actions.getWorkflowRun(args);
-
-                if (after.status === 'waiting') {
-                  throw error;
-                }
-
-                core.info(
-                  `A execução #${run.run_number} já mudou de estado.`
-                );
-              }
-            }
-
-                                    const { data } =
-              await github.rest.actions.listWorkflowRuns({
-                ...repo,
-                workflow_id,
-                branch: 'main',
-                per_page: 100
-              });
-
-            const runs = data.workflow_runs || [];
-
-            const successes = runs
-              .filter(run =>
-                run.head_branch === 'main' &&
-                run.status === 'completed' &&
-                run.conclusion === 'success'
-              )
-              .sort((a, b) =>
-                Date.parse(b.updated_at) - Date.parse(a.updated_at)
-              );
-
+            const now = Date.now();
+            const { data } = await github.rest.actions.listWorkflowRuns({
+              ...context.repo,
+              workflow_id: 'update-index.yml',
+              branch: 'main',
+              per_page: 100
+            });
+            const runs = (data.workflow_runs || [])
+              .filter(run => run.head_branch === 'main');
+            const successes = runs.filter(run =>
+              run.status === 'completed' && run.conclusion === 'success'
+            ).sort((a, b) => Date.parse(b.updated_at) - Date.parse(a.updated_at));
             const last = successes[0];
+            const latest = [...runs].sort((a, b) =>
+              Date.parse(b.created_at) - Date.parse(a.created_at)
+            )[0];
 
             if (last) {
-              core.info(
-                `Último sucesso: #${last.run_number}, ${last.updated_at}`
-              );
+              core.info(`Último sucesso: #${last.run_number}, ${last.updated_at}. ${last.html_url}`);
             }
-
-            if (
-              !last ||
-              Date.now() - Date.parse(last.updated_at) > 6 * hour
-            ) {
-              if (cancelled) {
-                core.warning(
-                  'Fila libertada. A próxima verificação confirmará ' +
-                  'se a atualização das categorias recuperou.'
-                );
-              } else {
-                core.setFailed(
-                  'Sem verificação das categorias concluída há mais ' +
-                  'de 6 horas. Verificar o workflow de atualização.'
-                );
+            if (!last || now - Date.parse(last.updated_at) > 6 * hour) {
+              core.setFailed(last
+                ? `Último sucesso há mais de 6 horas: ${last.html_url}`
+                : 'Nenhum sucesso entre as últimas 100 atualizações. Consultar o histórico de Actions.');
+            }
+            if (latest) {
+              core.info(`Última execução: #${latest.run_number}, ${latest.status}/${latest.conclusion || 'a aguardar'}. ${latest.html_url}`);
+              if (latest.status === 'completed' && latest.conclusion !== 'success') {
+                core.warning(`A última atualização terminou com ${latest.conclusion}. ${latest.html_url}`);
+              }
+            }
+            for (const run of runs.filter(run => run.status !== 'completed')) {
+              const age = now - Date.parse(run.created_at);
+              if (age > hour) {
+                core.warning(`Execução #${run.run_number} em ${run.status} há ${Math.round(age / 60000)} minutos. ${run.html_url}`);
               }
             }
 
-            await core.summary
-              .addRaw(
-                'Verificação concluída. ' +
-                `Cancelamentos solicitados: ${cancelled}.`
-              )
+            // A idade do JSON não indica falha: sem posts novos, ele pode ficar igual.
+            const url = 'https://paulomonte123456.github.io/termometro-category-index/categorias.json';
+            let published;
+            for (let attempt = 1; attempt <= 3; attempt++) {
+              try {
+                const response = await fetch(url, { signal: AbortSignal.timeout(20000) });
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                published = await response.json();
+                const count = published.posts && !Array.isArray(published.posts) && typeof published.posts === 'object' ? Object.keys(published.posts).length : 0;
+                if (published.version !== 1 || !Number.isInteger(count) || count < 1 ||
+                    !Number.isFinite(Date.parse(published.generatedAt))) {
+                  throw new Error('Índice vazio ou formato inválido');
+                }
+                core.info(`Índice acessível: ${count} posts. Última publicação: ${published.generatedAt}.`);
+                break;
+              } catch (error) {
+                if (attempt === 3) throw new Error(`Não foi possível validar ${url}: ${error.message}`);
+                core.warning(`Tentativa ${attempt}: ${error.message}. A repetir a consulta.`);
+                await new Promise(resolve => setTimeout(resolve, 2000 * attempt));
+              }
+            }
+            await core.summary.addHeading('Verificação do índice')
+              .addRaw(last ? `Último sucesso: [#${last.run_number}](${last.html_url}), ${last.updated_at}.` : 'Sem sucesso encontrado nas últimas 100 execuções.')
+              .addBreak()
+              .addRaw(`Índice publicado: ${url}. Data: ${published.generatedAt}.`)
               .write();
