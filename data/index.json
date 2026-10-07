@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-07T12:30:51.607Z",
+  "generatedAt": "2026-10-07T13:25:36.049Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -5566,6 +5566,13 @@
         "in-memoriam"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/adeus-glen-hansard"
+    },
+    "blog-post-890984640363730510": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/neon-define-campanha-para-o-oscar-2027-de-artificial-com-andrew-garfield-em-melhor-ator-coadjuvante-e-yura-borisov-para-melhor-ator"
     },
     "blog-post-891020338902130596": {
       "primary": "premiacao-preoscar",
