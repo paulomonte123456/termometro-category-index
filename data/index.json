@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-07T16:04:41.708Z",
+  "generatedAt": "2026-10-08T15:57:12.807Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -3810,6 +3810,13 @@
       ],
       "path": "/cinema-eacute-tudo-isso---blog/confira-daniel-day-lewis-no-primeiro-poster-de-anemone"
     },
+    "blog-post-636905069873835420": {
+      "primary": "festival-de-nova-york",
+      "categories": [
+        "festival-de-nova-york"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/festival-de-nova-york-2026-artificial-e-considerado-um-dos-melhores-filmes-de-luca-guadagnino-com-total-destaque-para-a-otima-atuacao-de-andrew-garfield"
+    },
     "blog-post-637531935895650647": {
       "primary": "termometro-de-sexta",
       "categories": [
@@ -6287,6 +6294,13 @@
         "premiacao-preoscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/paul-thomas-anderson-por-uma-batalha-apos-a-outra-e-o-grande-vencedor-do-usc-scripter-awards-2026-a-premiacao-que-se-tornou-o-maior-termometro-para-a-categoria-de-roteiro-adaptado"
+    },
+    "blog-post-980074484424412218": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/mongolia-escolhe-independence-keeper-of-the-prophecy-como-seu-representante-ao-oscar-2027-de-melhor-filme-internacional"
     },
     "blog-post-980274220819466037": {
       "primary": "festival-de-veneza",
