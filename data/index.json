@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-09T01:16:30.813Z",
+  "generatedAt": "2026-10-09T14:37:32.336Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -1059,6 +1059,20 @@
       ],
       "path": "/cinema-eacute-tudo-isso---blog/termometro-de-sexta-uma-batalha-apos-a-outra-e-o-filme-mais-lembrado-pelas-listas-de-melhores-filmes-de-2025-veja-o-top-10-completo"
     },
+    "blog-post-251315431580842934": {
+      "primary": "poster",
+      "categories": [
+        "poster"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/focus-divulga-os-dois-primeiros-posteres-de-elsinore-filme-que-foi-recebidos-nos-festivais-com-burburinho-de-oscar-para-andrew-scott"
+    },
+    "blog-post-251521484591152605": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/republica-democratica-do-congo-participa-pela-primeira-vez-desde-1997-e-escolhe-rumba-royale-como-seu-representante-ao-oscar-2027-de-melhor-filme-internacional"
+    },
     "blog-post-252963310368748111": {
       "primary": "especial",
       "categories": [
@@ -1114,6 +1128,13 @@
         "primeira-foto"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/confira-a-primeira-imagem-de-paper-tiger-com-adam-driver-e-scarlet-johansson-em-competicao-no-festival-de-cannes-2026"
+    },
+    "blog-post-257211877668699232": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/paquistao-escolhe-hanging-by-a-wire-documentario-sobre-o-resgate-de-8-pessoas-num-teleferico-quebrado-como-seu-representante-ao-oscar-2027-de-melhor-filme-internacional"
     },
     "blog-post-257684936840938690": {
       "primary": "cobertura-oscar",
