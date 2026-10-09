@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-09T14:37:32.336Z",
+  "generatedAt": "2026-10-09T19:51:26.353Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -6056,6 +6056,13 @@
         "in-memoriam"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/adeus-claudia-cardinale"
+    },
+    "blog-post-951860162865402670": {
+      "primary": "alerta-oscar",
+      "categories": [
+        "alerta-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/netflix-divulga-o-primeiro-poster-de-as-novas-desventuras-de-cliff-booth-dirigido-por-david-fincher-com-roteiro-de-quentin-tarantino"
     },
     "blog-post-952338569353897803": {
       "primary": "in-memoriam",
