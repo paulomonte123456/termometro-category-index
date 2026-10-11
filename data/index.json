@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-11T04:28:23.961Z",
+  "generatedAt": "2026-10-11T14:52:34.688Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -3166,6 +3166,13 @@
       ],
       "path": "/cinema-eacute-tudo-isso---blog/senegal-escolhe-the-attachment-documentario-sobre-a-destruicao-de-um-bairro-para-a-construcao-de-uma-ferrovia-como-seu-representante-ao-oscar-2027-de-melhor-filme-internacional"
     },
+    "blog-post-539040826377144914": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/guatemala-escolhe-mountains-of-fire-como-seu-representante-ao-oscar-2027-de-melhor-filme-internacional"
+    },
     "blog-post-539081240777799729": {
       "primary": "festival-de-sundance",
       "categories": [
@@ -5090,6 +5097,13 @@
         "premiacao-preoscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/uma-batalha-apos-a-outra-vence-o-new-york-film-critics-circle-awards-2025-o-agente-secreto-vence-como-melhor-filme-internacional-e-wagner-moura-como-melhor-ator"
+    },
+    "blog-post-808152721118185825": {
+      "primary": "premiacao-preoscar",
+      "categories": [
+        "premiacao-preoscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/danny-boyle-recebera-o-premio-de-tributo-a-direcao-por-seu-trabalho-com-ink-no-gotham-awards-2026"
     },
     "blog-post-810250114890571531": {
       "primary": "cobertura-oscar",
