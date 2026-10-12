@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-11T19:29:06.761Z",
+  "generatedAt": "2026-10-12T19:16:50.587Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -373,6 +373,13 @@
       ],
       "path": "/cinema-eacute-tudo-isso---blog/f1-vence-o-cinema-audio-society-awards-2026-a-premiacao-dos-mixadores-de-som"
     },
+    "blog-post-151973248420952574": {
+      "primary": "festival-de-londres",
+      "categories": [
+        "festival-de-londres"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/andrew-garfield-reage-as-especulacoes-sobre-o-oscar-enquanto-artificial-recebe-recepcao-calorosa-em-londres-sinto-um-orgulho-imenso-deste-filme"
+    },
     "blog-post-153711362923247500": {
       "primary": "cobertura-oscar",
       "categories": [
@@ -547,6 +554,13 @@
         "premiacao-preoscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/f1-pecadores-frankenstein-confira-os-indicados-ao-cinema-audio-society-awards-2026-a-premiacao-dos-mixadores-de-som"
+    },
+    "blog-post-180232713690843171": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/siria-participa-pela-segunda-vez-na-historia-e-escolhe-the-other-side-of-the-sun-como-seu-representante-ao-oscar-2027-de-melhor-filme-internacional"
     },
     "blog-post-180345521749943754": {
       "primary": "noticias-do-dia",
@@ -2724,6 +2738,13 @@
         "festival-de-veneza"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/george-clooney-sera-homenageado-por-toda-sua-carreira-com-o-leao-de-ouro-no-festival-de-veneza"
+    },
+    "blog-post-468217511769924869": {
+      "primary": "poster",
+      "categories": [
+        "poster"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/apple-divulga-o-primeiro-poster-e-um-trailer-completo-de-a-arte-de-ser-heumann-de-sian-heder-diretora-de-no-ritmo-do-coracao"
     },
     "blog-post-469195566845821583": {
       "primary": "termometro-de-sexta",
