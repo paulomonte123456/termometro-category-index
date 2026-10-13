@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-13T16:23:07.119Z",
+  "generatedAt": "2026-10-13T21:30:21.209Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -2318,6 +2318,13 @@
         "cobertura-oscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/faltam-29-dias-para-o-oscar-2026"
+    },
+    "blog-post-411591533144795438": {
+      "primary": "premiacao-preoscar",
+      "categories": [
+        "premiacao-preoscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/you-can-see-everything-e-14th-lideram-o-critics-choice-documentary-awards-2026"
     },
     "blog-post-411725588689367459": {
       "primary": "poster",
