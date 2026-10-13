@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-12T19:16:50.587Z",
+  "generatedAt": "2026-10-13T16:23:07.119Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -127,6 +127,13 @@
         "cobertura-oscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/faltam-67-dias-para-o-oscar-2026"
+    },
+    "blog-post-123112118370662063": {
+      "primary": "noticias-do-dia",
+      "categories": [
+        "noticias-do-dia"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/ava-duvernay-e-criticada-pelo-uso-de-ia-no-documentario-14th"
     },
     "blog-post-123529926454050225": {
       "primary": "novidade",
@@ -3250,6 +3257,13 @@
       ],
       "path": "/cinema-eacute-tudo-isso---blog/festival-de-veneza-2026-ink-e-recebido-com-grande-entusiasmo-e-pode-ser-o-esperado-retorno-de-danny-boyle-ao-oscar-com-destaque-para-jack-oconnell"
     },
+    "blog-post-543722377580165713": {
+      "primary": "poster",
+      "categories": [
+        "poster"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/oscar-2028-confira-os-primeiros-posteres-de-narnia-o-sobrinho-do-mago-e-de-o-exorcista-martires"
+    },
     "blog-post-545534768151599877": {
       "primary": "cobertura-oscar",
       "categories": [
@@ -3823,6 +3837,13 @@
         "festival-de-cannes"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/festival-de-cannes-2026-o-juri-foi-escolhido-com-demi-moore-stellan-skarsgard-e-chloe-zhao-entre-eles-conheca-todos-os-integrantes-responsaveis-pela-palma-de-ouro"
+    },
+    "blog-post-620566532799389571": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/nova-zelandia-escolhe-o-horror-gotico-marama-como-seu-representante-ao-oscar-2027-de-melhor-filme-internacional"
     },
     "blog-post-621290622794136405": {
       "primary": "premiacao-preoscar",
