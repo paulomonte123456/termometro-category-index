@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-13T21:30:21.209Z",
+  "generatedAt": "2026-10-14T15:16:35.524Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -786,6 +786,13 @@
       ],
       "path": "/cinema-eacute-tudo-isso---blog/armenia-escolhe-o-documentario-my-armenian-phantoms-como-o-seu-representante-ao-oscar-2026-de-melhor-filme-internacional"
     },
+    "blog-post-209260319668893263": {
+      "primary": "bastidores",
+      "categories": [
+        "bastidores"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/ben-affleck-critica-o-bullying-de-ensino-medio-contra-digger-se-voce-pune-filmes-que-correm-riscos-vai-acabar-com-um-monte-de-filmes-de-mrda-e-padronizados"
+    },
     "blog-post-209590987392365051": {
       "primary": "bastidores",
       "categories": [
@@ -1310,6 +1317,13 @@
         "cobertura-oscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/faltam-10-dias-para-o-oscar-2026"
+    },
+    "blog-post-274863189992003564": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/ruanda-participa-pela-primeira-vez-na-historia-e-escolhe-benimana-como-seu-representante-ao-oscar-2027-de-melhor-filme-internacional"
     },
     "blog-post-276940326608284138": {
       "primary": "premiacao-preoscar",
@@ -5622,6 +5636,13 @@
         "cobertura-oscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/festival-de-annecy-2026-the-violinist-vence-o-premio-principal-e-comeca-a-chamar-atencao-para-o-oscar-2027-de-melhor-animacao"
+    },
+    "blog-post-881162242228273997": {
+      "primary": "premiacao-preoscar",
+      "categories": [
+        "premiacao-preoscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/com-titulos-como-la-bola-negra-fjord-e-natal-amargo-o-european-film-awards-2027-divulga-longlist-com-45-filmes"
     },
     "blog-post-882005519153339315": {
       "primary": "novidade",
