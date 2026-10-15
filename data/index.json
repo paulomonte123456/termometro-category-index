@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-14T15:16:35.524Z",
+  "generatedAt": "2026-10-15T14:58:16.974Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -1325,6 +1325,13 @@
       ],
       "path": "/cinema-eacute-tudo-isso---blog/ruanda-participa-pela-primeira-vez-na-historia-e-escolhe-benimana-como-seu-representante-ao-oscar-2027-de-melhor-filme-internacional"
     },
+    "blog-post-276821595366180434": {
+      "primary": "poster",
+      "categories": [
+        "poster"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/com-john-malkovich-steve-buscemi-e-sam-rockwell-confira-os-posteres-de-elenco-de-cavalo-selvagem-nove"
+    },
     "blog-post-276940326608284138": {
       "primary": "premiacao-preoscar",
       "categories": [
@@ -1569,6 +1576,13 @@
         "premiacao-preoscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/uma-batalha-apos-a-outra-vence-como-melhor-filme-no-bafta-2026"
+    },
+    "blog-post-310363446437511389": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/o-outro-lado-das-redes-de-aaron-sorkin-vai-competir-na-temporada-como-melhor-roteiro-original"
     },
     "blog-post-310433930866595497": {
       "primary": "festival-de-cannes",
@@ -4586,6 +4600,13 @@
         "termometro-de-sexta"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/termometro-de-sexta-os-indicados-ao-oscar-de-melhor-filme-que-estrearam-no-primeiro-semestre-nos-ultimos-10-anos"
+    },
+    "blog-post-734700276565086593": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/reino-unido-escolhe-rehearsals-for-a-revolution-como-seu-representante-e-pela-primeira-vez-na-historia-o-oscar-chega-a-100-paises-inscritos-na-categoria-de-filme-internacional"
     },
     "blog-post-735392717558885299": {
       "primary": "especial",
