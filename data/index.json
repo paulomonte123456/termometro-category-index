@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-15T14:58:16.974Z",
+  "generatedAt": "2026-10-16T14:21:10.377Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -3803,6 +3803,13 @@
       ],
       "path": "/cinema-eacute-tudo-isso---blog/armenia-escolhe-o-documentario-in-the-land-of-arto-como-o-seu-representante-ao-oscar-2027-de-melhor-filme-internacional"
     },
+    "blog-post-610439891716512116": {
+      "primary": "premiacao-preoscar",
+      "categories": [
+        "premiacao-preoscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/al-pacino-sera-homenageado-pela-sua-carreira-no-actor-awards-2027"
+    },
     "blog-post-610963950868191190": {
       "primary": "premiacao-preoscar",
       "categories": [
@@ -4278,6 +4285,13 @@
         "premiacao-preoscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/pecadores-lidera-com-14-indicacoes-no-seattle-film-critics-society-awards-2025-amy-madigan-recebe-dupla-indicacao-por-a-hora-do-mal"
+    },
+    "blog-post-682498572338651528": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/midday-meal-de-majid-majidi-vence-premio-de-melhor-filme-em-busan-e-se-qualifica-para-o-oscar-2027-de-melhor-filme-internacional"
     },
     "blog-post-684098497676213089": {
       "primary": "termometro-de-sexta",
