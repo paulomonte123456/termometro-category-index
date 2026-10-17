@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-16T14:21:10.377Z",
+  "generatedAt": "2026-10-17T17:18:36.076Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -92,6 +92,13 @@
         "noticias-do-dia"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/cahiers-du-cinema-lista-os-10-melhores-filmes-de-2025-com-filmes-como-o-agente-secreto-e-uma-batalha-apos-a-outra"
+    },
+    "blog-post-115993109458525183": {
+      "primary": "premiacao-preoscar",
+      "categories": [
+        "premiacao-preoscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/elenco-e-equipe-de-michael-vao-receber-o-premio-tributo-musical-no-gotham-awards-2026"
     },
     "blog-post-116457780633177965": {
       "primary": "cobertura-oscar",
