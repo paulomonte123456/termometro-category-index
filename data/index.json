@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-18T14:53:24.218Z",
+  "generatedAt": "2026-10-19T17:25:59.663Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -1114,6 +1114,13 @@
         "cobertura-oscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/republica-democratica-do-congo-participa-pela-primeira-vez-desde-1997-e-escolhe-rumba-royale-como-seu-representante-ao-oscar-2027-de-melhor-filme-internacional"
+    },
+    "blog-post-252411430418844896": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/taylor-swift-andrew-garfield-jaafar-jackson-e-outros-nomes-cotados-para-o-oscar-2027-estiveram-no-academy-museum-gala"
     },
     "blog-post-252963310368748111": {
       "primary": "especial",
@@ -2787,6 +2794,13 @@
         "festival-de-veneza"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/george-clooney-sera-homenageado-por-toda-sua-carreira-com-o-leao-de-ouro-no-festival-de-veneza"
+    },
+    "blog-post-467937407803828275": {
+      "primary": "bastidores",
+      "categories": [
+        "bastidores"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/jesse-eisenberg-afirma-que-nao-conseguia-papeis-em-grandes-estudios-apos-ganhar-um-framboesa-de-ouro-por-batman-vs-superman"
     },
     "blog-post-468217511769924869": {
       "primary": "poster",
