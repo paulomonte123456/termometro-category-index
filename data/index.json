@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-19T17:25:59.663Z",
+  "generatedAt": "2026-10-20T15:20:54.173Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -785,6 +785,13 @@
         "premiacao-preoscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/as-indicacoes-ao-bafta-e-ao-wga-serao-anunciadas-depois-das-indicacoes-ao-oscar-2026"
+    },
+    "blog-post-204238808715669657": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/you-can-see-everything-vai-ter-uma-grande-campanha-para-amanda-seyfried-em-atriz-coadjuvante-e-isso-pode-fazer-com-que-diversas-premiacoes-mudem-suas-regras"
     },
     "blog-post-206532123108755268": {
       "primary": "cobertura-oscar",
@@ -3487,6 +3494,13 @@
         "festival-de-veneza"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/festival-de-veneza-2026-bucking-fastard-de-werner-herzog-divide-opinioes-sendo-chamado-de-complexo-comovente-estranho-e-inclassificavel-mas-as-irmas-kate-e-rooney-mara-recebem-muitos-elogios"
+    },
+    "blog-post-572287888307879821": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/azerbaijao-escolhe-taghiyev-school-como-seu-representante-ao-oscar-2027-de-melhor-filme-internacional"
     },
     "blog-post-572800677372097454": {
       "primary": "poster",
