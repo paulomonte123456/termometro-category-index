@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-20T15:20:54.173Z",
+  "generatedAt": "2026-10-21T16:08:16.772Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -1009,6 +1009,13 @@
         "bastidores"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/depois-das-polemicas-josh-safdie-diretor-de-marty-supreme-e-removido-de-um-evento-de-campanha-para-o-oscar-em-nova-york"
+    },
+    "blog-post-233789051532300676": {
+      "primary": "trailer",
+      "categories": [
+        "trailer"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/mubi-divulga-o-primeiro-trailer-de-covarde-de-lukas-dhont-representante-da-belgica-no-oscar-2027"
     },
     "blog-post-233847064191348078": {
       "primary": "premiacao-preoscar",
@@ -4327,6 +4334,13 @@
         "cobertura-oscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/midday-meal-de-majid-majidi-vence-premio-de-melhor-filme-em-busan-e-se-qualifica-para-o-oscar-2027-de-melhor-filme-internacional"
+    },
+    "blog-post-683364499503421191": {
+      "primary": "premiacao-preoscar",
+      "categories": [
+        "premiacao-preoscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/michael-e-negado-como-comedia-ou-musical-e-vai-competir-nas-categorias-de-drama-no-globo-de-ouro-2027"
     },
     "blog-post-684098497676213089": {
       "primary": "termometro-de-sexta",
