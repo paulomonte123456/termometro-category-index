@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-22T17:34:39.505Z",
+  "generatedAt": "2026-10-22T20:46:23.403Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -1030,6 +1030,13 @@
         "cobertura-oscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/cuba-escolhe-malecon-como-seu-representante-ao-oscar-2027-de-melhor-filme-internacional"
+    },
+    "blog-post-234804941594053632": {
+      "primary": "premiacao-preoscar",
+      "categories": [
+        "premiacao-preoscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/com-naza-e-you-can-see-everything-confira-a-pre-lista-com-os-17-selecionados-da-escolha-da-audiencia-do-cinema-eye-honors-2027"
     },
     "blog-post-234975637439367250": {
       "primary": "premiacao-preoscar",
@@ -6434,6 +6441,13 @@
         "alerta-oscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/daniel-day-lewis-esta-de-volta-aos-cinemas-no-primeiro-trailer-de-anemone"
+    },
+    "blog-post-969132793596063724": {
+      "primary": "premiacao-preoscar",
+      "categories": [
+        "premiacao-preoscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/andrew-scott-o-roteirista-e-o-diretor-de-elsinore-receberao-o-premio-tributo-legacy-no-gotham-awards-2026"
     },
     "blog-post-971363147939081858": {
       "primary": "novidade",
