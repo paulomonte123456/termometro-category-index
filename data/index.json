@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-22T20:46:23.403Z",
+  "generatedAt": "2026-10-23T12:50:12.628Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -1989,6 +1989,13 @@
         "festival-de-cannes"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/festival-de-cannes-2026-park-chan-wook-e-anunciado-como-presidente-do-juri"
+    },
+    "blog-post-347875683770017824": {
+      "primary": "in-memoriam",
+      "categories": [
+        "in-memoriam"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/adeus-tom-skerritt"
     },
     "blog-post-348559685587694959": {
       "primary": "premiacao-preoscar",
