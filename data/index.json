@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-27T19:41:26.465Z",
+  "generatedAt": "2026-10-28T15:56:22.210Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -4279,6 +4279,13 @@
       ],
       "path": "/cinema-eacute-tudo-isso---blog/michael-b-jordan-x-timothee-chalamet-quem-leva-o-oscar-de-melhor-ator"
     },
+    "blog-post-666070943777522573": {
+      "primary": "premiacao-preoscar",
+      "categories": [
+        "premiacao-preoscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/com-o-brasileiro-a-fabulosa-maquina-do-tempo-de-eliza-capai-confira-a-shortlist-com-os-16-selecionados-a-melhor-documentario-pelo-ida-awards-2026"
+    },
     "blog-post-666325299503906804": {
       "primary": "cobertura-oscar",
       "categories": [
@@ -5496,6 +5503,13 @@
         "cobertura-oscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/croacia-escolhe-fiume-o-morte-onde-moradores-encenam-uma-ocupacao-militar-de-100-anos-atras-como-seu-representante-ao-oscar-2026-de-melhor-filme-internacional"
+    },
+    "blog-post-833924268177118921": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/coyote-vs-acme-e-considerado-elegivel-para-o-oscar-2027-de-melhor-animacao"
     },
     "blog-post-835389244504443275": {
       "primary": "novidade",
