@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-28T15:56:22.210Z",
+  "generatedAt": "2026-10-29T19:17:36.618Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -1828,6 +1828,13 @@
         "festival-de-cannes"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/festival-de-cannes-2027-john-travolta-e-confirmado-no-festival-com-propeller-one-way-night-coach-sua-estreia-na-direcao"
+    },
+    "blog-post-330425076114979447": {
+      "primary": "in-memoriam",
+      "categories": [
+        "in-memoriam"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/adeus-barbara-barrie"
     },
     "blog-post-331083670393889172": {
       "primary": "cobertura-oscar",
@@ -6364,6 +6371,13 @@
         "poster"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/de-kathryn-bigelow-vencedora-do-oscar-por-guerra-ao-terror-netflix-divulga-o-primeiro-poster-de-casa-de-dinamite"
+    },
+    "blog-post-953446183988332231": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/estudos-mostram-que-a-maioria-dos-votantes-do-oscar-nao-estao-mais-em-los-angeles-o-que-afeta-diretamente-as-campanhas-para-as-premiacoes"
     },
     "blog-post-955160571229526298": {
       "primary": "festival-de-veneza",
