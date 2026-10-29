@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-29T19:17:36.618Z",
+  "generatedAt": "2026-10-29T23:23:19.633Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -5363,6 +5363,13 @@
         "in-memoriam"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/adeus-brenda-fricker"
+    },
+    "blog-post-812400074302780993": {
+      "primary": "in-memoriam",
+      "categories": [
+        "in-memoriam"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/adeus-patrick-stewart"
     },
     "blog-post-812560571403306420": {
       "primary": "cobertura-oscar",
