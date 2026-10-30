@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-29T23:23:19.633Z",
+  "generatedAt": "2026-10-30T16:40:04.861Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -1828,6 +1828,13 @@
         "festival-de-cannes"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/festival-de-cannes-2027-john-travolta-e-confirmado-no-festival-com-propeller-one-way-night-coach-sua-estreia-na-direcao"
+    },
+    "blog-post-329741083425805324": {
+      "primary": "bastidores",
+      "categories": [
+        "bastidores"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/michael-douglas-diz-que-jack-nicholson-esta-aposentado-e-nao-deve-voltar-a-fazer-filmes"
     },
     "blog-post-330425076114979447": {
       "primary": "in-memoriam",
@@ -4334,6 +4341,13 @@
         "festival-de-nova-york"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/festival-de-nova-york-2025-daniel-day-lewis-e-muito-bom-em-anemone-que-e-um-filme-pretencioso-e-parado-que-nao-sustenta-a-grandeza-da-volta-do-ator"
+    },
+    "blog-post-671935179393950192": {
+      "primary": "termometro-de-sexta",
+      "categories": [
+        "termometro-de-sexta"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/termometro-de-sexta-drama-ou-comedia-confira-como-estao-as-inscricoes-para-o-globo-de-ouro-2027-dos-principais-filmes-da-temporada"
     },
     "blog-post-671967639924793771": {
       "primary": "festival-de-cannes",
