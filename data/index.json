@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-01T13:51:47.707Z",
+  "generatedAt": "2026-11-03T01:20:39.760Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -6651,6 +6651,13 @@
         "especial"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/oscar-2026-esnobados-e-surpresas"
+    },
+    "blog-post-979057703423322467": {
+      "primary": "poster",
+      "categories": [
+        "poster"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/netflix-divulga-um-belo-poster-de-as-novas-desventuras-de-cliff-booth-dirigido-por-david-fincher-com-roteiro-de-quentin-tarantino"
     },
     "blog-post-979118871694077431": {
       "primary": "cobertura-oscar",
