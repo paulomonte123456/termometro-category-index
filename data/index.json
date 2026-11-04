@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-03T21:44:52.675Z",
+  "generatedAt": "2026-11-04T16:25:10.100Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -806,6 +806,13 @@
         "cobertura-oscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/you-can-see-everything-vai-ter-uma-grande-campanha-para-amanda-seyfried-em-atriz-coadjuvante-e-isso-pode-fazer-com-que-diversas-premiacoes-mudem-suas-regras"
+    },
+    "blog-post-204296788765265484": {
+      "primary": "bastidores",
+      "categories": [
+        "bastidores"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/michael-douglas-diz-que-glenn-close-deveria-ter-vencido-o-oscar-por-atracao-fatal-e-que-todos-ficaram-chocados-por-ela-ter-perdido-o-premio-para-cher"
     },
     "blog-post-206532123108755268": {
       "primary": "cobertura-oscar",
@@ -3641,6 +3648,13 @@
         "cobertura-oscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/faltam-90-dias-para-o-oscar-2026"
+    },
+    "blog-post-576805248437697881": {
+      "primary": "in-memoriam",
+      "categories": [
+        "in-memoriam"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/adeus-tinto-brass"
     },
     "blog-post-577640438291034690": {
       "primary": "festival-de-toronto",
