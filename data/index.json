@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-04T16:25:10.100Z",
+  "generatedAt": "2026-11-05T17:41:45.583Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -1520,6 +1520,13 @@
         "cobertura-oscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/italia-escolhe-the-spiral-premiado-no-festival-de-veneza-como-seu-representante-ao-oscar-2027-de-melhor-filme-internacional"
+    },
+    "blog-post-292495653906263157": {
+      "primary": "bastidores",
+      "categories": [
+        "bastidores"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/klara-e-o-sol-tem-notas-bem-melhores-com-o-publico-e-taika-waititi-ataca-a-critica-almas-tristes-e-perdidas-que-nao-conseguiram-realizar-seus-sonhos"
     },
     "blog-post-292674025244525102": {
       "primary": "cobertura-oscar",
