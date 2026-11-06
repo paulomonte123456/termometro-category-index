@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-05T17:41:45.583Z",
+  "generatedAt": "2026-11-06T23:03:47.041Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -120,6 +120,13 @@
         "noticias-do-dia"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/steven-spielberg-vence-um-grammy-pelo-documentario-a-musica-de-john-williams-e-se-torna-um-egot"
+    },
+    "blog-post-119362518780838006": {
+      "primary": "termometro-de-sexta",
+      "categories": [
+        "termometro-de-sexta"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/termometro-de-sexta-confira-os-18-filmes-que-estao-elegiveis-para-a-categoria-de-melhor-blockbuster-no-globo-de-ouro-2027"
     },
     "blog-post-120354809724517688": {
       "primary": "noticias-do-dia",
@@ -2920,6 +2927,13 @@
         "noticias-do-dia"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/homem-aranha-um-novo-dia-supera-vingadores-ultimato-e-estabelece-recorde-de-estreia-com-us-360-milhoes"
+    },
+    "blog-post-470957597993332538": {
+      "primary": "in-memoriam",
+      "categories": [
+        "in-memoriam"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/adeus-sebastian-lelio"
     },
     "blog-post-473443755639711037": {
       "primary": "premiacao-preoscar",
