@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-08T16:16:04.597Z",
+  "generatedAt": "2026-11-09T16:06:42.572Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -1864,6 +1864,11 @@
       ],
       "path": "/cinema-eacute-tudo-isso---blog/adeus-barbara-barrie"
     },
+    "blog-post-330628409486292038": {
+      "primary": "",
+      "categories": [],
+      "path": "/cinema-eacute-tudo-isso---blog/tudo-pode-ser-visto-vence-5-premios-incluindo-melhor-documentario-no-critics-choice-documentary-awards-2026"
+    },
     "blog-post-331083670393889172": {
       "primary": "cobertura-oscar",
       "categories": [
@@ -3536,6 +3541,13 @@
         "festival-de-veneza"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/festival-de-veneza-2026-robert-pattinson-e-aplaudido-por-7-minutos-e-recebe-otimas-criticas-no-intenso-primetime"
+    },
+    "blog-post-552937657123675389": {
+      "primary": "bastidores",
+      "categories": [
+        "bastidores"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/depois-de-o-agente-secreto-kleber-mendonca-filho-e-wagner-moura-vao-fazer-juntos-o-filme-correspondente-estrangeiro"
     },
     "blog-post-555265638270869178": {
       "primary": "cobertura-oscar",
