@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-10T00:13:29.214Z",
+  "generatedAt": "2026-11-10T15:45:06.132Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -1108,6 +1108,13 @@
       ],
       "path": "/cinema-eacute-tudo-isso---blog/com-o-brasileiro-adolpho-veloso-de-sonhos-de-trem-conheca-os-indicados-ao-american-society-of-cinematographers-awards-2026-a-premiacao-dos-profissionais-de-fotografia"
     },
+    "blog-post-236729808997285166": {
+      "primary": "bastidores",
+      "categories": [
+        "bastidores"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/james-gray-diretor-de-paper-tiger-fala-sobre-cannes-voce-nao-ganha-mrda-nenhuma-se-for-americano"
+    },
     "blog-post-241031498380789542": {
       "primary": "premiacao-preoscar",
       "categories": [
@@ -1872,8 +1879,10 @@
       "path": "/cinema-eacute-tudo-isso---blog/adeus-barbara-barrie"
     },
     "blog-post-330628409486292038": {
-      "primary": "",
-      "categories": [],
+      "primary": "premiacao-preoscar",
+      "categories": [
+        "premiacao-preoscar"
+      ],
       "path": "/cinema-eacute-tudo-isso---blog/tudo-pode-ser-visto-vence-5-premios-incluindo-melhor-documentario-no-critics-choice-documentary-awards-2026"
     },
     "blog-post-331083670393889172": {
@@ -5291,6 +5300,13 @@
         "festival-de-telluride"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/festival-de-telluride-2026-julianne-moore-e-paul-giamatti-brilham-em-the-debut-o-hilario-e-ousado-filme-de-jesse-eisenberg"
+    },
+    "blog-post-787777881218207334": {
+      "primary": "premiacao-preoscar",
+      "categories": [
+        "premiacao-preoscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/diretor-do-gotham-awards-diz-que-a-odisseia-nao-se-inscreveu-para-a-premiacao"
     },
     "blog-post-788019807566673193": {
       "primary": "cobertura-oscar",
