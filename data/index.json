@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-11T16:21:21.793Z",
+  "generatedAt": "2026-11-12T19:50:01.943Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -3061,6 +3061,13 @@
       ],
       "path": "/cinema-eacute-tudo-isso---blog/oscar-2027-glenn-close-ridley-scott-floyd-norman-e-as-produtoras-christine-vachon-e-pamela-koffler-foram-os-escolhidos-para-receber-o-oscar-honorario"
     },
+    "blog-post-487536227243455991": {
+      "primary": "bastidores",
+      "categories": [
+        "bastidores"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/quentin-tarantino-demitiu-isabelle-huppert-de-bastardos-inglorios-por-ela-nao-comparecer-a-leitura-de-roteiro"
+    },
     "blog-post-487665048199412462": {
       "primary": "primeira-foto",
       "categories": [
@@ -5377,6 +5384,13 @@
         "cobertura-oscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/canada-escolhe-nina-roza-vencedor-de-melhor-roteiro-em-berlim-como-o-seu-representante-ao-oscar-2027-de-melhor-filme-internacional"
+    },
+    "blog-post-800206782703916308": {
+      "primary": "premiacao-preoscar",
+      "categories": [
+        "premiacao-preoscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/tudo-pode-ser-visto-segue-forte-na-temporada-e-lidera-com-7-indicacoes-o-cinema-eye-honors-2027"
     },
     "blog-post-800990010669276706": {
       "primary": "noticias-do-dia",
