@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-13T21:40:53.991Z",
+  "generatedAt": "2026-11-14T15:44:12.005Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -2682,6 +2682,13 @@
         "especial"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/os-melhores-filmes-de-2025-ate-agora"
+    },
+    "blog-post-432656687572624268": {
+      "primary": "premiacao-preoscar",
+      "categories": [
+        "premiacao-preoscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/a-terra-do-meu-pai-lidera-com-11-indicacoes-e-sandra-huller-recebe-2-nomeacoes-em-melhor-atriz-no-european-film-awards-2027"
     },
     "blog-post-433222126660560050": {
       "primary": "cobertura-oscar",
