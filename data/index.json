@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-16T20:56:16.757Z",
+  "generatedAt": "2026-11-17T21:17:26.308Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -141,6 +141,13 @@
         "noticias-do-dia"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/neon-adquire-os-direitos-de-all-of-a-sudden-novo-filme-de-ryusuke-hamaguchi-diretor-de-drive-my-car-ja-pensando-na-disputa-pela-palma-de-ouro-no-festival-de-cannes"
+    },
+    "blog-post-121216455277393951": {
+      "primary": "bastidores",
+      "categories": [
+        "bastidores"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/steven-spielberg-diz-que-tudo-pode-ser-visto-e-um-dos-documentarios-mais-extraordinarios-que-ele-viu-nas-ultimas-decadas"
     },
     "blog-post-123049970414250852": {
       "primary": "cobertura-oscar",
@@ -3137,6 +3144,13 @@
         "premiacao-preoscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/wicked-parte-2-f1-frankenstein-confira-os-indicados-ao-costume-designers-guild-awards-2026-a-premiacao-do-sindicato-dos-figurinistas"
+    },
+    "blog-post-500249529340453804": {
+      "primary": "cobertura-oscar",
+      "categories": [
+        "cobertura-oscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/nicolas-cage-e-christian-bale-se-esforcam-mas-madden-de-david-o-russell-fracassa-com-a-critica"
     },
     "blog-post-500382381626145062": {
       "primary": "festival-de-toronto",
