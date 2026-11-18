@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-17T21:17:26.308Z",
+  "generatedAt": "2026-11-18T19:32:44.555Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -1437,6 +1437,13 @@
       ],
       "path": "/cinema-eacute-tudo-isso---blog/uma-batalha-apos-a-outra-vence-como-melhor-filme-e-entrega-premios-para-4-dos-seus-atores-incluindo-sean-penn-como-ator-coadjuvante-no-phoenix-film-critics-society-awards-2025"
     },
+    "blog-post-277246671480929686": {
+      "primary": "premiacao-preoscar",
+      "categories": [
+        "premiacao-preoscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/concrete-land-sobre-uma-familia-palestina-sendo-despejada-de-suas-terras-lidera-o-ida-awards-2026-com-6-indicacoes"
+    },
     "blog-post-277788243338132115": {
       "primary": "cobertura-oscar",
       "categories": [
@@ -2808,6 +2815,13 @@
         "novidade"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/para-o-oscar-100-a-academia-quer-fazer-uma-lista-com-50-salas-de-cinema-de-destaque-do-mundo-todo"
+    },
+    "blog-post-450572335187380772": {
+      "primary": "festival-de-cannes",
+      "categories": [
+        "festival-de-cannes"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/netflix-planeja-retorno-a-cannes-em-2027-com-jack-of-spades-de-joel-coen"
     },
     "blog-post-451590220343626968": {
       "primary": "premiacao-preoscar",
