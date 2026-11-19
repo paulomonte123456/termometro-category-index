@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-18T19:32:44.555Z",
+  "generatedAt": "2026-11-19T18:36:57.137Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -162,6 +162,13 @@
         "noticias-do-dia"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/ava-duvernay-e-criticada-pelo-uso-de-ia-no-documentario-14th"
+    },
+    "blog-post-123192309822516169": {
+      "primary": "especial",
+      "categories": [
+        "especial"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/as-100-maiores-estrelas-de-cinema-de-todos-os-tempos"
     },
     "blog-post-123529926454050225": {
       "primary": "novidade",
@@ -3718,6 +3725,13 @@
         "trailer"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/lea-seydoux-descobre-algo-horrivel-sobre-seu-marido-no-primeiro-trailer-de-gentle-monster-que-tambem-conta-com-catherine-deneuve"
+    },
+    "blog-post-575462586305675261": {
+      "primary": "premiacao-preoscar",
+      "categories": [
+        "premiacao-preoscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/taylor-swift-vence-como-melhor-cancao-com-toy-story-5-e-a-odisseia-vence-como-melhor-trilha-sonora-no-hollywood-music-in-media-awards-2026"
     },
     "blog-post-575516022108656821": {
       "primary": "especial",
