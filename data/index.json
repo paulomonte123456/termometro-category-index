@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-22T20:52:29.220Z",
+  "generatedAt": "2026-11-23T21:43:59.575Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -2487,6 +2487,13 @@
       ],
       "path": "/cinema-eacute-tudo-isso---blog/faltam-89-dias-para-o-oscar-2026"
     },
+    "blog-post-406435401818903307": {
+      "primary": "bastidores",
+      "categories": [
+        "bastidores"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/mahershala-ali-diz-que-dois-oscars-nao-ajudaram-sua-carreira-voce-continua-esperando-buscando-e-procurando"
+    },
     "blog-post-409358854424288946": {
       "primary": "poster",
       "categories": [
@@ -3123,6 +3130,13 @@
         "primeira-foto"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/andrew-haigh-divulga-as-primeiras-imagens-de-a-long-winter-e-diz-que-esse-filme-e-a-sua-versao-de-o-regresso"
+    },
+    "blog-post-488164988665676559": {
+      "primary": "premiacao-preoscar",
+      "categories": [
+        "premiacao-preoscar"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/a-odisseia-lidera-a-shortlist-de-pre-indicados-no-critics-choice-awards-2027"
     },
     "blog-post-488348988111332789": {
       "primary": "cobertura-oscar",
