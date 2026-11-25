@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-11-24T16:22:59.904Z",
+  "generatedAt": "2026-11-25T19:38:00.072Z",
   "posts": {
     "blog-post-101076228142832429": {
       "primary": "festival-de-veneza",
@@ -1576,6 +1576,13 @@
         "cobertura-oscar"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/italia-escolhe-the-spiral-premiado-no-festival-de-veneza-como-seu-representante-ao-oscar-2027-de-melhor-filme-internacional"
+    },
+    "blog-post-291618088773554101": {
+      "primary": "bastidores",
+      "categories": [
+        "bastidores"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/james-gray-aumenta-a-critica-ao-festival-de-cannes-cannes-e-uma-porcaria-nao-se-preocupem-nao-vou-voltar"
     },
     "blog-post-292495653906263157": {
       "primary": "bastidores",
@@ -5419,6 +5426,13 @@
         "termometro-de-sexta"
       ],
       "path": "/cinema-eacute-tudo-isso---blog/termometro-de-sexta-especial-quem-foi-o-vencedor-de-melhor-filme-internacional-em-cada-ano-de-copa-do-mundo"
+    },
+    "blog-post-785773489927400887": {
+      "primary": "poster",
+      "categories": [
+        "poster"
+      ],
+      "path": "/cinema-eacute-tudo-isso---blog/penelope-cruz-e-javier-bardem-sao-destaque-nos-primeiros-poster-e-trailer-de-bunker"
     },
     "blog-post-785786618498563794": {
       "primary": "bastidores",
